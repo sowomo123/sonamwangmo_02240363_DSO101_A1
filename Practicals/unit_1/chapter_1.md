@@ -1,8 +1,8 @@
 # Docker
-![Docker](docker.jpeg)
+![Docker](../public/images/docker.jpeg)
 
 
-**Docker** is a system that helps programmers develop, deploy, and run software programs using containers.
+**Docker** is a popular platform used to create, manage, and run containers. It simplifies containerization by providing tools to build container images and deploy them easily.
 
 Containers have the program itself and everything required for it to work (libraries, dependencies, and configuration). It ensures that the program runs uniformly regardless of whether it’s on your local machine or another computer/server.
 
@@ -71,4 +71,48 @@ We use Docker to simplify **software development and deployment processes**.
 
 
 ## Docker Architecture and Working
-![Docker](dockerA.jpeg)
+![Docker](../public/images/dockerA.jpeg)
+Docker makes use of a client-server architecture.
+
+The communication between the docker client and the daemon makes possible the creation, execution, and distribution of the docker containers.The docker client can be run along with the daemon within the same machine, or we can use the connection between the docker client and the docker daemon from a remote location.Through the REST API, the docker client and daemon communicate using the UNIX socket or through the network.
+### Docker Architecture
+
+Docker architecture describes **how Docker components work together to create and run containers**.
+
+### Main Components of Docker Architecture
+
+1. **Docker Client**
+    
+    The Docker Client is the interface used by users to interact with Docker.
+    
+    Users run commands like `docker build`, `docker run`, and `docker pull`.
+    
+2. **Docker Host**
+    
+    The Docker Host is the system where Docker runs. It contains the Docker Engine, containers, and images.
+    
+3. **Docker Engine (Docker Daemon)** 
+    
+    The Docker Engine is the core component that builds, runs, and manages containers.
+    
+4. **Docker Images** 
+    
+    Docker images are read-only templates used to create containers. They contain the application and required dependencies.
+    
+5. **Docker Containers**
+    
+    Containers are running instances of Docker images where the application actually runs.
+    
+6. **Docker Registry**
+    
+    A Docker Registry stores Docker images.
+
+    Example: Docker Hub, where users can download and upload images.
+
+## Introduction to Containerization and Docker
+**Containerization** is a technology that allows applications to be packaged together with their dependencies, libraries, and configuration files into a container. This ensures the application runs consistently across different environments, such as development, testing, and production.
+
+A **container** is a lightweight, portable unit that includes everything needed to run an application.
+
+
+
