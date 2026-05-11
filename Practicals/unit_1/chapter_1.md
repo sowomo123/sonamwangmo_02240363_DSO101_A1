@@ -118,3 +118,27 @@ A **container** is a lightweight, portable unit that includes everything needed 
 ## Virtualization vs. Containerization
 ![Docker](../public/images/vm.jpeg)
 ![Docker](../public/images/d.jpeg)
+
+## Docker Commands
+![Docker](../public/images/commands.png)
+
+## Advantage of docker 
+1. **Speed** - The speed of Docker containers compared to a virtual machine is very fast. The time required to build a container is very fast because they are tiny and lightweight.
+
+2. **Portability** - The applications that are built inside docker containers are extremely portable. These portable applications can easily be moved anywhere as a single element and their performance also remains the same.
+
+
+## What is CI/CD?
+**CI/CD** stands for:
+
+- **CI (Continuous Integration):** Automatically integrating and testing code changes.
+- **CD (Continuous Delivery / Continuous Deployment):** Automatically delivering or deploying applications.
+ 
+## The Three Pillars of CI/CD
+1. Continuous Integration (CI)
+2. Continuous Delivery (CD)
+3. Continuous Deployment (CD)
+
+
+## CI workflow
+![Docker](../public/images/wt.webp)
