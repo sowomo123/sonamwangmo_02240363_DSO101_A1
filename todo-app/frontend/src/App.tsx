@@ -1,88 +1,59 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import TaskItem from './components/TaskItem';
 import TaskForm from './components/TaskForm';
 import { Task, TaskFormData } from './types';
-import apiService from './services/api';
 
 function App() {
-  const [tasks, setTasks] = useState<Task[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [tasks, setTasks] = useState<Task[]>([
+    {
+      id: '1',
+      title: 'Sample Task',
+      description: 'This is a sample task to test the UI',
+      status: 'pending',
+      createdAt: new Date()
+    }
+  ]);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingTask, setEditingTask] = useState<Task | null>(null);
 
-  // Fetch tasks from backend on component mount
-  useEffect(() => {
-    fetchTasks();
-  }, []);
-
-  const fetchTasks = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      const response = await apiService.getTasks();
-      setTasks(response.data);
-    } catch (error) {
-      setError((error as Error).message || 'Failed to fetch tasks');
-      console.error('Error fetching tasks:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   // Add a new task
-  const addTask = async (taskData: TaskFormData) => {
-    try {
-      setError(null);
-      const response = await apiService.createTask(taskData);
-      setTasks([...tasks, response.data]);
-      setIsFormOpen(false);
-    } catch (error) {
-      setError((error as Error).message || 'Failed to create task');
-      console.error('Error creating task:', error);
-    }
+  const addTask = (taskData: TaskFormData) => {
+    const newTask: Task = {
+      id: Date.now().toString(),
+      title: taskData.title,
+      description: taskData.description,
+      status: taskData.status,
+      createdAt: new Date()
+    };
+    setTasks([...tasks, newTask]);
+    setIsFormOpen(false);
   };
 
   // Update an existing task
-  const updateTask = async (id: string, taskData: TaskFormData) => {
-    try {
-      setError(null);
-      const response = await apiService.updateTask(id, taskData);
-      setTasks(tasks.map(task => 
-        task.id === id ? response.data : task
-      ));
-      setEditingTask(null);
-      setIsFormOpen(false);
-    } catch (error) {
-      setError((error as Error).message || 'Failed to update task');
-      console.error('Error updating task:', error);
-    }
+  const updateTask = (id: string, taskData: TaskFormData) => {
+    setTasks(tasks.map(task => 
+      task.id === id 
+        ? { ...task, title: taskData.title, description: taskData.description, status: taskData.status }
+        : task
+    ));
+    setEditingTask(null);
+    setIsFormOpen(false);
   };
 
   // Delete a task
-  const deleteTask = async (id: string) => {
-    try {
-      setError(null);
-      await apiService.deleteTask(id);
-      setTasks(tasks.filter(task => task.id !== id));
-    } catch (error) {
-      setError((error as Error).message || 'Failed to delete task');
-      console.error('Error deleting task:', error);
-    }
+  const deleteTask = (id: string) => {
+    setTasks(tasks.filter(task => task.id !== id));
   };
 
   // Toggle task status
-  const toggleTaskStatus = async (id: string) => {
-    try {
-      setError(null);
-      const response = await apiService.toggleTaskStatus(id);
-      setTasks(tasks.map(task => 
-        task.id === id ? response.data : task
-      ));
-    } catch (error) {
-      setError((error as Error).message || 'Failed to toggle task status');
-      console.error('Error toggling task status:', error);
-    }
+  const toggleTaskStatus = (id: string) => {
+    setTasks(tasks.map(task => 
+      task.id === id 
+        ? { ...task, status: task.status === 'pending' ? 'completed' : 'pending' }
+        : task
+    ));
   };
 
   // Open form for editing

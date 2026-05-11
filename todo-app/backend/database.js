@@ -14,17 +14,15 @@ const connectDB = async () => {
       mongoURI = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
     }
 
-    const conn = await mongoose.connect(mongoURI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    const conn = await mongoose.connect(mongoURI);
 
     console.log(`MongoDB Connected: ${conn.connection.host}`);
     console.log(`Database: ${conn.connection.name}`);
     
   } catch (error) {
     console.error('Database connection error:', error.message);
-    process.exit(1);
+    console.log('Server will continue running without database connection');
+    // Don't exit process, allow server to run without database
   }
 };
 
