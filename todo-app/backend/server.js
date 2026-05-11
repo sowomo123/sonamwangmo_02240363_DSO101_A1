@@ -4,8 +4,8 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
-const connectDB = require('./config/database');
-const taskRoutes = require('./routes/tasks');
+const { connectDB } = require('./database-pg');
+const taskRoutes = require('./routes/tasks-pg');
 
 // Initialize Express app
 const app = express();
@@ -29,7 +29,7 @@ app.use('/api/', limiter);
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
   credentials: true
 }));
 
@@ -67,7 +67,7 @@ app.use('*', (req, res) => {
 // Global error handler
 app.use((err, req, res, next) => {
   console.error('Unhandled error:', err);
-  
+
   res.status(err.status || 500).json({
     success: false,
     error: err.message || 'Internal server error'

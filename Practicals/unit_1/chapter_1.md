@@ -142,3 +142,6 @@ A **container** is a lightweight, portable unit that includes everything needed 
 
 ## CI workflow
 ![Docker](../public/images/wt.webp)
+
+## CI and CD Workflow
+![Docker](../public/images/cicd.webp)

@@ -64,7 +64,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ task, onSubmit, onCancel }) => {
     if (validate()) {
       onSubmit({
         title: formData.title.trim(),
-        description: formData.description.trim(),
+        description: formData.description?.trim() || '',
         status: formData.status,
       });
     }
