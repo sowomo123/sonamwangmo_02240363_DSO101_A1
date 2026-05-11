@@ -115,4 +115,6 @@ Docker architecture describes **how Docker components work together to create an
 A **container** is a lightweight, portable unit that includes everything needed to run an application.
 
 
-
+## Virtualization vs. Containerization
+![Docker](../public/images/vm.jpeg)
+![Docker](../public/images/d.jpeg)
