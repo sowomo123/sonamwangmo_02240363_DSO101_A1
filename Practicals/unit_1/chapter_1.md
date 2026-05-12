@@ -145,3 +145,13 @@ A **container** is a lightweight, portable unit that includes everything needed 
 
 ## CI and CD Workflow
 ![Docker](../public/images/cicd.webp)
+
+## Common CI/CD Tools
+1. Jenkins 
+2. GitHub Actions 
+3. GitLab CI/CD 
+4. Concourse
+5. GoCD 
+6. Spinnaker 
+7. Screwdriver 
+
