@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="3" errors="0" time="2.872">
+  <testsuite name="API Endpoints" errors="0" failures="3" skipped="0" timestamp="2026-05-12T14:49:22" time="2.657" tests="3">
+    <testcase classname="API Endpoints GET /health should return health status" name="API Endpoints GET /health should return health status" time="0.203">
+      <failure>Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at Function.listen (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\express\lib\application.js:635:24)
+    at Object.listen (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\server.js:79:20)
+    at Runtime._execModule (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runtime\build\index.js:1439:24)
+    at Runtime._loadModule (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runtime\build\index.js:1022:12)
+    at Runtime.requireModule (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runtime\build\index.js:882:12)
+    at Runtime.requireModuleOrMock (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runtime\build\index.js:1048:21)
+    at Object.require (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\tests\api.test.js:2:13)
+    at Runtime._execModule (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runtime\build\index.js:1439:24)
+    at Runtime._loadModule (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runtime\build\index.js:1022:12)
+    at Runtime.requireModule (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runtime\build\index.js:882:12)
+    at jestAdapter (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at runTestInternal (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runner\build\runTest.js:444:34)</failure>
+    </testcase>
+    <testcase classname="API Endpoints GET /api/tasks should return tasks array" name="API Endpoints GET /api/tasks should return tasks array" time="0.153">
+      <failure>Error: expected 200 &quot;OK&quot;, got 500 &quot;Internal Server Error&quot;
+    at Object.expect (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\tests\api.test.js:20:10)
+    at Promise.then.completed (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runner\build\runTest.js:444:34)
+----
+    at Test._assertStatus (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\supertest\lib\test.js:252:14)
+    at C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\supertest\lib\test.js:308:13
+    at Test._assertFunction (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\supertest\lib\test.js:285:13)
+    at Test.assert (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\supertest\lib\test.js:164:23)
+    at Server.localAssert (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\supertest\lib\test.js:120:14)
+    at Object.onceWrapper (node:events:632:28)
+    at Server.emit (node:events:518:28)
+    at emitCloseNT (node:net:2419:8)
+    at processTicksAndRejections (node:internal/process/task_queues:89:21)</failure>
+    </testcase>
+    <testcase classname="API Endpoints POST /api/tasks should create a new task" name="API Endpoints POST /api/tasks should create a new task" time="0.138">
+      <failure>Error: expected 201 &quot;Created&quot;, got 500 &quot;Internal Server Error&quot;
+    at Object.expect (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\tests\api.test.js:38:10)
+    at Promise.then.completed (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\jest-runner\build\runTest.js:444:34)
+----
+    at Test._assertStatus (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\supertest\lib\test.js:252:14)
+    at C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\supertest\lib\test.js:308:13
+    at Test._assertFunction (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\supertest\lib\test.js:285:13)
+    at Test.assert (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\supertest\lib\test.js:164:23)
+    at Server.localAssert (C:\Users\DELL\Desktop\sonamwangmo_02240363_DSO101_A1\todo-app\backend\node_modules\supertest\lib\test.js:120:14)
+    at Object.onceWrapper (node:events:632:28)
+    at Server.emit (node:events:518:28)
+    at emitCloseNT (node:net:2419:8)
+    at processTicksAndRejections (node:internal/process/task_queues:89:21)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

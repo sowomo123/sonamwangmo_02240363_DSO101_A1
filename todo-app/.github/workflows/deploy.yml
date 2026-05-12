@@ -1,0 +1,57 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Checkout code
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    # 2. Setup Node.js
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    # 3. Login to DockerHub
+    - name: Login to DockerHub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    # 4. Build & Push Frontend Docker Image
+    - name: Build and Push Frontend Image
+      run: |
+        cd frontend
+        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/fe-todo:02240363 .
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/fe-todo:02240363
+
+    # 5. Build & Push Backend Docker Image
+    - name: Build and Push Backend Image
+      run: |
+        cd backend
+        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/be-todo:02240363 .
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/be-todo:02240363
+
+    # 6. Deploy to Render.com (via webhook)
+    - name: Trigger Render Deployment
+      run: |
+        # Trigger frontend deployment
+        curl -X POST ${{ secrets.RENDER_WEBHOOK_URL_FRONTEND }} \
+          -H "Authorization: Bearer ${{ secrets.RENDER_DEPLOY_HOOK_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          -d '{"clearCache": true}'
+        
+        # Trigger backend deployment  
+        curl -X POST ${{ secrets.RENDER_WEBHOOK_URL_BACKEND }} \
+          -H "Authorization: Bearer ${{ secrets.RENDER_DEPLOY_HOOK_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          -d '{"clearCache": true}'

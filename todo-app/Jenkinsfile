@@ -1,0 +1,77 @@
+pipeline { 
+    agent any 
+    tools { 
+        nodejs 'NodeJS' 
+    } 
+    
+    stages { 
+        // Stage 1: Checkout Code 
+        stage('Checkout') { 
+            steps { 
+                git branch: 'main', 
+                url: 'https://github.com/sowomo123/sonamwangmo_02240363_DSO101_A1.git' 
+            } 
+        } 
+        
+        // Stage 2: Install Dependencies 
+        stage('Install Backend') {
+            steps {
+                dir('backend') {
+                    sh 'npm install'
+                }
+            }
+        }
+        
+        stage('Install Frontend') {
+            steps {
+                dir('frontend') {
+                    sh 'npm install'
+                }
+            }
+        }
+        
+        // Stage 3: Build (if applicable, e.g., for React/TypeScript) 
+        stage('Build Frontend') { 
+            steps { 
+                dir('frontend') {
+                    sh 'npm run build' 
+                }
+            } 
+        } 
+        
+        // Stage 4: Run Unit Tests 
+        stage('Test Backend') { 
+            steps { 
+                dir('backend') {
+                    sh 'npm test'
+                } 
+            } 
+            post { 
+                always { 
+                    junit 'backend/junit.xml'
+                } 
+            } 
+        } 
+        
+        // Stage 5: Deploy (Docker Example) 
+        stage('Deploy') { 
+            steps { 
+                script { 
+                    // Build Docker images
+                    dir('backend') {
+                        docker.build('sonambulbulwangmo/be-todo:02240363') 
+                    }
+                    dir('frontend') {
+                        docker.build('sonambulbulwangmo/fe-todo:02240363') 
+                    }
+                    
+                    // Push to Docker Hub (requires credentials) 
+                    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-creds') { 
+                        docker.image('sonambulbulwangmo/be-todo:02240363').push()
+                        docker.image('sonambulbulwangmo/fe-todo:02240363').push()
+                    } 
+                } 
+            } 
+        } 
+    } 
+}
