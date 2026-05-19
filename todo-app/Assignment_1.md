@@ -48,7 +48,7 @@ The project contains:
 - Update Task
 - Delete Task
 
-![Backend](./public/images/backend.png "Backend")
+![Backend](./public/images/backend%20.png "Backend")
 
 - Link ([backend link](https://be-todo-02240363.onrender.com/))
 
