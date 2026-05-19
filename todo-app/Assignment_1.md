@@ -56,28 +56,6 @@ The project contains:
 
 
 
-## Part A: Manual Docker Build & Push to Docker Hub
-
-### Step 1: Build Docker Images
-
-**Backend Image:**
-```bash
-cd backend
-docker build -t yourusername/be-todo:02240363 .
-``` 
-
-
-#### Frontend Service
-1. Click **New** → **Web Service**
-2. Select **"Existing image from Docker Hub"**
-3. **Image URL:** `yourusername/fe-todo:02240363`
-4. **Name:** `fe-todo-02240363`
-5. **Environment Variables:**
-   - `VITE_API_URL`: `https://be-todo-02240363.onrender.com` (your live backend URL)
-6. Click **Create Web Service**
-
-
-
 ### Results
 - **Frontend Live URL:** https://fe-todo-02240363.onrender.com
 - **Backend Live URL:** https://be-todo-02240363.onrender.com
