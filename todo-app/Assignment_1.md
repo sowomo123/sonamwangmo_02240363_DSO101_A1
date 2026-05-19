@@ -38,7 +38,7 @@ The project contains:
 - Delete Tasks
 - Display Task List
 
-![Frontend](./public/image/frontend.png "Frontend")
+![Frontend](./public/images/frontend.png "Frontend")
 - Link ([frontend link](https://fe-todo-02240363.onrender.com/))
 
 ## Backend Features
@@ -47,4 +47,8 @@ The project contains:
 - Read Task
 - Update Task
 - Delete Task
+
+![Backend](./public/images/backend.png "Backend")
+
 - Link ([backend link](https://be-todo-02240363.onrender.com/))
+
