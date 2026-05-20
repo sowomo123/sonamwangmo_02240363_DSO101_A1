@@ -113,7 +113,7 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
 
 ## Jenkin Setup
 ![Jenkins Dashboard](public/images/admin.png)
-*Credentials stored securely in Jenkins*
+
 
 ## Jenkins Dashboard
 
@@ -129,3 +129,6 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
 
 #  Add Docker Hub Credentials in Jenkins
 ![Jenkins Dashboard](public/images/docker.png)
+
+# Created a simple test file
+![Jenkins Dashboard](public/images/test.png)
