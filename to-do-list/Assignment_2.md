@@ -132,3 +132,6 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
 
 # Created a simple test file
 ![Jenkins Dashboard](public/images/test.png)
+
+# Jest configuration 
+![Jenkins Dashboard](public/images/jest.png)
