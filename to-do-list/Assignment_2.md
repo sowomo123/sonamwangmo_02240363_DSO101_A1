@@ -135,3 +135,7 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
 
 # Jest configuration 
 ![Jenkins Dashboard](public/images/jest.png)
+
+#  Create Pipeline in Jenkins and Configure the Pipeline
+![Jenkins Dashboard](public/images/pipe.png)
+
