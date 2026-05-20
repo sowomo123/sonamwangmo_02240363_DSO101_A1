@@ -112,26 +112,19 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
 # Screenshots
 
 ## Jenkin Setup
-![Jenkins Dashboard](images/admin.png)
+![Jenkins Dashboard](public/images/admin.png)
 
 ## Jenkins Dashboard
-Add screenshot here
 
-```markdown
-![Jenkins Dashboard](images/Jdash.png)
-```
+![Jenkins Dashboard](public/images/Jdash.png)
 
 ## Successful Pipeline Run
 
-```markdown
-![Pipeline Success](images/pipeline-success.png)
-```
+![Pipeline Success](public/images/bepush.png)
 
 ## Docker Hub Repository
 
-```markdown
-![Docker Hub](images/dockerhub.png)
-```
+![Docker Hub](public/images/dhubbe.png)
 
 ---
 
