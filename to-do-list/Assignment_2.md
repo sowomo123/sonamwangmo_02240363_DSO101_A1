@@ -113,27 +113,16 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
 
 ## Jenkin Setup
 ![Jenkins Dashboard](public/images/admin.png)
+`` username: Sowomo123``
+`` Password: Sowomo123``
 
 ## Jenkins Dashboard
 
 ![Jenkins Dashboard](public/images/Jdash.png)
+ 
+### Configure Node.js in Jenkins
 
-## Successful Pipeline Run
 
-![Pipeline Success](public/images/bepush.png)
 
-## Docker Hub Repository
 
-![Docker Hub](public/images/dhubbe.png)
-
----
-
-# Deployment Links
-
-## Frontend Deployment
-Add frontend deployment URL here
-
-## Backend Deployment
-Add backend deployment URL here
-
----
+# Token 
