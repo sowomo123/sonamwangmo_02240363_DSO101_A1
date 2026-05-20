@@ -1,20 +1,25 @@
 {
-  "name": "backend",
+  "name": "node-todo-app",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest --ci --reporters=default --reporters=jest-junit",
+    "build": "echo 'Build complete'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "cors": "^2.8.6",
+    "express": "^4.18.0",
+    "cors": "^2.8.5",
     "dotenv": "^17.4.2",
-    "express": "^5.2.1",
     "mongoose": "^9.6.2"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-junit": "^16.0.0"
   }
 }
