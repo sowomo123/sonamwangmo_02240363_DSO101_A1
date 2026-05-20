@@ -63,43 +63,43 @@ docker run -p 3000:80 --name fe-todo sonambulbulwangmo/fe-todo:02240363SW
 
 
 ### Running in Local host 
-![LH](LH.png)
+![LH](public/images/LH.png)
 
 
 This is an image of a modern and clean **TaskFlow to-do list application**, which is running on `localhost:3000`. The app has a soft blue and white color theme, along with a simple dashboard design. The stats for tasks, including total, active, and completed, are displayed here. New tasks can be added, and there is also a tab feature that lets users choose from All, Active, and Completed options. Tasks can be marked as completed via check boxes, and tasks can be deleted via the trash bin icon.
 
-![BE](BE.png)
+![BE](public/images/BE.png)
 This is the backend running in the terminal
 
-![Dlogin](Dlogin.png)
+![Dlogin](public/images/Dlogin.png)
 Docker login to build image
 
-![Dbuild](Dbuild.png)
+![Dbuild](public/images/Dbuild.png)
 The picture is that of a successful Docker image build in the terminal window. The command used was `docker build -t sonambulbulwangmo/be-todo:02240363SW .`, which ran successfully to create and export the Node.js app image based on the `node:18-alpine` base image.
 
-![Pushed](bepush.png)
+![Pushed](public/images/bepush.png)
 This image shows the Docker image for the backend  being pushed to the registry.
 
-![imagedhubbe](dhubbe.png)
+![imagedhubbe](public/images/dhubbe.png)
 backend image pushed in docker hub
 
-![dbuildfe](f.png)
-![befinish](befinish.png)
+![dbuildfe](public/images/f.png)
+![befinish](public/images/befinish.png)
 
 
-![fepush](p.png)
+![fepush](public/images/p.png)
 Frontend pushed  complete 
 
 ## Render deploy (backend)
-![renderbe](renderbe.png)
-![httpbe](httpbe.png)
+![renderbe](public/images/renderbe.png)
+![httpbe](public/images/httpbe.png)
 `` https://be-todo-02240363-6ee4.onrender.com``
 
 this the the bannkend deployed in render
  
 ## Render deploy (frontend)
-![renderfe](re.png)
-![live](live.png)
+![renderfe](public/images/re.png)
+![live](public/images/live.png)
 ``https://fe-todo-02240363sw.onrender.com``
 
 ## Challenges
