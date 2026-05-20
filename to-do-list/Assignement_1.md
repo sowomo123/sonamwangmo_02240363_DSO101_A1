@@ -68,13 +68,14 @@ docker run -p 3000:80 --name fe-todo sonambulbulwangmo/fe-todo:02240363SW
 
 This is an image of a modern and clean **TaskFlow to-do list application**, which is running on `localhost:3000`. The app has a soft blue and white color theme, along with a simple dashboard design. The stats for tasks, including total, active, and completed, are displayed here. New tasks can be added, and there is also a tab feature that lets users choose from All, Active, and Completed options. Tasks can be marked as completed via check boxes, and tasks can be deleted via the trash bin icon.
 
+## Backend running in terminal
 ![BE](public/images/BE.png)
 This is the backend running in the terminal
-
+## Docker login
 ![Dlogin](public/images/Dlogin.png)
 Docker login to build image
 
-![Dbuild](public/images/Dbuild.png)
+![Dbuild](public/images/dbuild.png)
 The picture is that of a successful Docker image build in the terminal window. The command used was `docker build -t sonambulbulwangmo/be-todo:02240363SW .`, which ran successfully to create and export the Node.js app image based on the `node:18-alpine` base image.
 
 ![Pushed](public/images/bepush.png)
