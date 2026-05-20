@@ -120,8 +120,9 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
 
 ![Jenkins Dashboard](public/images/Jdash.png)
  
-### Configure Node.js in Jenkins
-
+## Configure Node.js in Jenkins
+![Jenkins Dashboard](public/images/node.png)
+ 
 
 
 
