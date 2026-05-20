@@ -79,9 +79,11 @@ Docker login to build image
 ## Docker backend build 
 ![Dbuild](public/images/dbuild.png)
 The picture is that of a successful Docker image build in the terminal window. The command used was `docker build -t sonambulbulwangmo/be-todo:02240363SW .`, which ran successfully to create and export the Node.js app image based on the `node:18-alpine` base image.
-## Docker pushed
+
+## succesful push in Docker 
 ![Pushed](public/images/bepush.png)
 This image shows the Docker image for the backend  being pushed to the registry.
+
 ## backend image pushed in docker hub
 ![imagedhubbe](public/images/dhubbe.png)
 
@@ -124,7 +126,7 @@ Frontend pushed  complete
 - Strengthened understanding of environment-based configuration in production apps.
 
 ## Deployment Link
-- Backend (Render): https://be-todo-02240363sw.onrender.com
+- Backend (Render): https://be-todo-02240363.onrender.com/
 - Frontend (Render): https://fe-todo-02240363sw.onrender.com/
 
 
