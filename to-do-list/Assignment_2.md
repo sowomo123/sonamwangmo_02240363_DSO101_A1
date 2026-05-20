@@ -124,6 +124,5 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
 ![Jenkins Dashboard](public/images/node.png)
  
 
-
-
-# Token 
+# Personal access tokens (classic) 
+`` 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 ``
