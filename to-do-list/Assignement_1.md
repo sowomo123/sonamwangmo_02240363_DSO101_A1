@@ -75,33 +75,39 @@ This is the backend running in the terminal
 ![Dlogin](public/images/Dlogin.png)
 Docker login to build image
 
+
+## Docker backend build 
 ![Dbuild](public/images/dbuild.png)
 The picture is that of a successful Docker image build in the terminal window. The command used was `docker build -t sonambulbulwangmo/be-todo:02240363SW .`, which ran successfully to create and export the Node.js app image based on the `node:18-alpine` base image.
-
+## Docker pushed
 ![Pushed](public/images/bepush.png)
 This image shows the Docker image for the backend  being pushed to the registry.
-
+## backend image pushed in docker hub
 ![imagedhubbe](public/images/dhubbe.png)
-backend image pushed in docker hub
 
+## Docker build
 ![dbuildfe](public/images/f.png)
 ![befinish](public/images/befinish.png)
 
-
+## docker pushed 
 ![fepush](public/images/p.png)
 Frontend pushed  complete 
 
 ## Render deploy (backend)
 ![renderbe](public/images/renderbe.png)
-![httpbe](public/images/httpbe.png)
-`` https://be-todo-02240363-6ee4.onrender.com``
 
-this the the bannkend deployed in render
+## live backend 
+![httpbe](public/images/httpbe.png)
+
+
+
  
 ## Render deploy (frontend)
 ![renderfe](public/images/re.png)
+
+## live frontend 
 ![live](public/images/live.png)
-``https://fe-todo-02240363sw.onrender.com``
+
 
 ## Challenges
 - Configuring frontend and backend communication across local and deployed environments.
