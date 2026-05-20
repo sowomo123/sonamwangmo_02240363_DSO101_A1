@@ -1,0 +1,84 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'NodeJS'
+    }
+
+    environment {
+        DOCKERHUB_USERNAME = 'sonambulbulwangmo'
+        IMAGE_NAME = 'sonambulbulwangmo/node-app'
+        IMAGE_TAG = 'latest'
+    }
+
+    stages {
+
+        // STAGE 1: Get code from GitHub
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/sowomo123/sonamwangmo_02240363_DSO101_A1.git',
+                    credentialsId: 'github-creds'
+            }
+        }
+
+        // STAGE 2: Install dependencies
+        stage('Install') {
+            steps {
+                dir('to-do-list/backend') {
+                    sh 'npm install'
+                }
+            }
+        }
+
+        // STAGE 3: Build
+        stage('Build') {
+            steps {
+                dir('to-do-list/backend') {
+                    sh 'npm run build'
+                }
+            }
+        }
+
+        // STAGE 4: Run Tests
+        stage('Test') {
+            steps {
+                dir('to-do-list/backend') {
+                    sh 'npm test'
+                }
+            }
+            post {
+                always {
+                    junit 'to-do-list/backend/junit.xml'
+                }
+            }
+        }
+
+        // STAGE 5: Build Docker Image & Push
+        stage('Deploy') {
+            steps {
+                dir('to-do-list/backend') {
+                    script {
+                        docker.build("${IMAGE_NAME}:${IMAGE_TAG}")
+
+                        docker.withRegistry(
+                            'https://registry.hub.docker.com',
+                            'docker-hub-creds'
+                        ) {
+                            docker.image("${IMAGE_NAME}:${IMAGE_TAG}").push()
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo ' Pipeline failed. Check logs above.'
+        }
+    }
+}
