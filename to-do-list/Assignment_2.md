@@ -125,7 +125,10 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
  
 
 # Personal access tokens (classic) 
-`` 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 ``\
+*Token stored securely in Jenkins credentials (not in code)*
 
 # Added GitHub Credentials in Jenkins
 ![Jenkins Dashboard](public/images/c.png)
+
+#  Add Docker Hub Credentials in Jenkins
+![Jenkins Dashboard](public/images/docker.png)
