@@ -113,8 +113,7 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
 
 ## Jenkin Setup
 ![Jenkins Dashboard](public/images/admin.png)
-`` username: Sowomo123``
-`` Password: Sowomo123``
+*Credentials stored securely in Jenkins*
 
 ## Jenkins Dashboard
 
@@ -124,8 +123,6 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
 ![Jenkins Dashboard](public/images/node.png)
  
 
-# Personal access tokens (classic) 
-*Token stored securely in Jenkins credentials (not in code)*
 
 # Added GitHub Credentials in Jenkins
 ![Jenkins Dashboard](public/images/c.png)
