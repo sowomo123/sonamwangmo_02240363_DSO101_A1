@@ -139,3 +139,8 @@ Learning to read Jenkins console logs and troubleshoot failing stages improved d
 #  Create Pipeline in Jenkins and Configure the Pipeline
 ![Jenkins Dashboard](public/images/pipe.png)
 
+# success Pipeline created 
+![Jenkins Dashboard](public/images/Spipeline.png)
+
+
+
